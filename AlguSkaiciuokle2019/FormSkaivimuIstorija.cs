@@ -19,11 +19,13 @@ namespace AlguSkaiciuokle2019
             GetTable();
 
             comboBoxFiltras.Items.Add("VardasPavarde");
-            comboBoxFiltras.Items.Add("Id");
+            comboBoxFiltras.Items.Add("EurAlgaAntPopieriaus");
+            comboBoxFiltras.Items.Add("EurAlgaIRankas");
             MetoduZodynas = new Dictionary<string, Func<Skaiciavimai, bool>>
-            {
-                {"Id", x => x.Id == int.Parse(textBoxPaieska.Text)},
-                {"VardasPavarde", x => x.VardasPavarde == textBoxPaieska.Text}
+            {                
+                {"VardasPavarde", x => x.VardasPavarde == textBoxPaieska.Text},
+                {"EurAlgaAntPopieriaus", x => x.EurAlgaAntPopieriaus == int.Parse(textBoxPaieska.Text)},
+                {"EurAlgaIRankas", x => x.EurAlgaIRankas == int.Parse(textBoxPaieska.Text)},
             };
         }
 
@@ -57,7 +59,7 @@ namespace AlguSkaiciuokle2019
             try
             {
                 DataContext db = new DataContext(connectionString);
-                var lentele = db.GetTable<Skaiciavimai>().Where(MetoduZodynas[(string)comboBoxFiltras.SelectedIndex]).ToList();
+                var lentele = db.GetTable<Skaiciavimai>().Where(MetoduZodynas[(string)comboBoxFiltras.SelectedItem]).ToList();
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = lentele;
             }

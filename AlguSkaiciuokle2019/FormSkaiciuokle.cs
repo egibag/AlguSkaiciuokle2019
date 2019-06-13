@@ -265,6 +265,7 @@ namespace AlguSkaiciuokle2019
             try
             {
                 DataContext db = new DataContext(connectionString);
+                var table = db.GetTable<Skaiciavimai>();
                 Skaiciavimai skaiciavStand = new Skaiciavimai();
                 skaiciavStand.VardasPavarde = textBoxVardasPavarde.Text;
                 skaiciavStand.DarbuotojoId = 0;
@@ -292,7 +293,7 @@ namespace AlguSkaiciuokle2019
                 skaiciavStand.AutorSveikatosDraudimo = Convert.ToDouble(textSveikDraudAutorTARIF.Text);
                 skaiciavStand.AutorPajamu = Convert.ToDouble(textPajaMokTARIF.Text);
 
-                //db.InsertOnSubSubmit(skaiciavStand);
+                table.InsertOnSubmit(skaiciavStand);
                 db.SubmitChanges();
                 db.Dispose();
               
