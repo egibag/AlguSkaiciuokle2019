@@ -29,87 +29,49 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNustatymai));
-            this.textBoxPajamuMokestisPagalSTANDARTINE = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxDarbdavMokTARIF = new System.Windows.Forms.TextBox();
+            this.labelDarbdavioMokesciaiPagalSTANDARTINE = new System.Windows.Forms.Label();
+            this.textBoxSveikDraudTARIF = new System.Windows.Forms.TextBox();
+            this.labelSveikatosDraudimasPagalSTANDARTINE = new System.Windows.Forms.Label();
+            this.textBoxPensDraudTARIF = new System.Windows.Forms.TextBox();
+            this.labelPensijuIrSocDraudimasPagalSTANDARTINE = new System.Windows.Forms.Label();
+            this.textBoxPajaMokTARIF = new System.Windows.Forms.TextBox();
             this.labelPajamuMokestisPagalSTANDARTINE = new System.Windows.Forms.Label();
+            this.groupBoxAutorine = new System.Windows.Forms.GroupBox();
+            this.textBoxSveikDraudAutorTARIF = new System.Windows.Forms.TextBox();
+            this.labelSveikatosDraudimasAUTORINE = new System.Windows.Forms.Label();
+            this.textBoxPajaMokAutorTARIF = new System.Windows.Forms.TextBox();
+            this.labelPajamuMokestisAUTORINE = new System.Windows.Forms.Label();
             this.buttonIssaugoti = new System.Windows.Forms.Button();
             this.buttonUzdaryti = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBoxDarbdavioMokesciaiPagalSTANDARTINE = new System.Windows.Forms.TextBox();
-            this.labelDarbdavioMokesciaiPagalSTANDARTINE = new System.Windows.Forms.Label();
-            this.textBoxSveikatosDraudimasPagalSTANDARTINE = new System.Windows.Forms.TextBox();
-            this.labelSveikatosDraudimasPagalSTANDARTINE = new System.Windows.Forms.Label();
-            this.textBoxPensijuIrSocDraudimasPagalSTANDARTINE = new System.Windows.Forms.TextBox();
-            this.labelPensijuIrSocDraudimasPagalSTANDARTINE = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBoxSveikatosDraudimasAUTORINE = new System.Windows.Forms.TextBox();
-            this.labelSveikatosDraudimasAUTORINE = new System.Windows.Forms.Label();
-            this.textBoxPensijuIrSocDraudimasAUTORINE = new System.Windows.Forms.TextBox();
-            this.labelPensijuIrSocDraudimasAUTORINE = new System.Windows.Forms.Label();
-            this.textBoxPajamuMokestisAUTORINE = new System.Windows.Forms.TextBox();
-            this.labelPajamuMokestisAUTORINE = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBoxAutorine.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // textBoxPajamuMokestisPagalSTANDARTINE
-            // 
-            this.textBoxPajamuMokestisPagalSTANDARTINE.Location = new System.Drawing.Point(17, 60);
-            this.textBoxPajamuMokestisPagalSTANDARTINE.Name = "textBoxPajamuMokestisPagalSTANDARTINE";
-            this.textBoxPajamuMokestisPagalSTANDARTINE.Size = new System.Drawing.Size(100, 20);
-            this.textBoxPajamuMokestisPagalSTANDARTINE.TabIndex = 0;
-            // 
-            // labelPajamuMokestisPagalSTANDARTINE
-            // 
-            this.labelPajamuMokestisPagalSTANDARTINE.AutoSize = true;
-            this.labelPajamuMokestisPagalSTANDARTINE.Location = new System.Drawing.Point(123, 63);
-            this.labelPajamuMokestisPagalSTANDARTINE.Name = "labelPajamuMokestisPagalSTANDARTINE";
-            this.labelPajamuMokestisPagalSTANDARTINE.Size = new System.Drawing.Size(106, 13);
-            this.labelPajamuMokestisPagalSTANDARTINE.TabIndex = 2;
-            this.labelPajamuMokestisPagalSTANDARTINE.Text = "%    Pajamų mokestis";
-            // 
-            // buttonIssaugoti
-            // 
-            this.buttonIssaugoti.Location = new System.Drawing.Point(22, 288);
-            this.buttonIssaugoti.Name = "buttonIssaugoti";
-            this.buttonIssaugoti.Size = new System.Drawing.Size(152, 43);
-            this.buttonIssaugoti.TabIndex = 4;
-            this.buttonIssaugoti.Text = "Išaugoti";
-            this.buttonIssaugoti.UseVisualStyleBackColor = true;
-            this.buttonIssaugoti.Click += new System.EventHandler(this.buttonIssaugoti_Click);
-            // 
-            // buttonUzdaryti
-            // 
-            this.buttonUzdaryti.Location = new System.Drawing.Point(316, 288);
-            this.buttonUzdaryti.Name = "buttonUzdaryti";
-            this.buttonUzdaryti.Size = new System.Drawing.Size(152, 43);
-            this.buttonUzdaryti.TabIndex = 5;
-            this.buttonUzdaryti.Text = "Uždaryti";
-            this.buttonUzdaryti.UseVisualStyleBackColor = true;
-            this.buttonUzdaryti.Click += new System.EventHandler(this.buttonUzdaryti_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBoxDarbdavioMokesciaiPagalSTANDARTINE);
+            this.groupBox1.Controls.Add(this.textBoxDarbdavMokTARIF);
             this.groupBox1.Controls.Add(this.labelDarbdavioMokesciaiPagalSTANDARTINE);
-            this.groupBox1.Controls.Add(this.textBoxSveikatosDraudimasPagalSTANDARTINE);
+            this.groupBox1.Controls.Add(this.textBoxSveikDraudTARIF);
             this.groupBox1.Controls.Add(this.labelSveikatosDraudimasPagalSTANDARTINE);
-            this.groupBox1.Controls.Add(this.textBoxPensijuIrSocDraudimasPagalSTANDARTINE);
+            this.groupBox1.Controls.Add(this.textBoxPensDraudTARIF);
             this.groupBox1.Controls.Add(this.labelPensijuIrSocDraudimasPagalSTANDARTINE);
-            this.groupBox1.Controls.Add(this.textBoxPajamuMokestisPagalSTANDARTINE);
+            this.groupBox1.Controls.Add(this.textBoxPajaMokTARIF);
             this.groupBox1.Controls.Add(this.labelPajamuMokestisPagalSTANDARTINE);
             this.groupBox1.Location = new System.Drawing.Point(22, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(446, 133);
-            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mokesčiai pagal standartinę darbo sutartį";
             // 
-            // textBoxDarbdavioMokesciaiPagalSTANDARTINE
+            // textBoxDarbdavMokTARIF
             // 
-            this.textBoxDarbdavioMokesciaiPagalSTANDARTINE.Location = new System.Drawing.Point(17, 79);
-            this.textBoxDarbdavioMokesciaiPagalSTANDARTINE.Name = "textBoxDarbdavioMokesciaiPagalSTANDARTINE";
-            this.textBoxDarbdavioMokesciaiPagalSTANDARTINE.Size = new System.Drawing.Size(100, 20);
-            this.textBoxDarbdavioMokesciaiPagalSTANDARTINE.TabIndex = 8;
+            this.textBoxDarbdavMokTARIF.Location = new System.Drawing.Point(17, 79);
+            this.textBoxDarbdavMokTARIF.Name = "textBoxDarbdavMokTARIF";
+            this.textBoxDarbdavMokTARIF.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDarbdavMokTARIF.TabIndex = 3;
             // 
             // labelDarbdavioMokesciaiPagalSTANDARTINE
             // 
@@ -120,12 +82,12 @@
             this.labelDarbdavioMokesciaiPagalSTANDARTINE.TabIndex = 9;
             this.labelDarbdavioMokesciaiPagalSTANDARTINE.Text = "%    Darbdavio mokesčiai ir Jūsų darbo vietos kaina darbdaviui.";
             // 
-            // textBoxSveikatosDraudimasPagalSTANDARTINE
+            // textBoxSveikDraudTARIF
             // 
-            this.textBoxSveikatosDraudimasPagalSTANDARTINE.Location = new System.Drawing.Point(17, 22);
-            this.textBoxSveikatosDraudimasPagalSTANDARTINE.Name = "textBoxSveikatosDraudimasPagalSTANDARTINE";
-            this.textBoxSveikatosDraudimasPagalSTANDARTINE.Size = new System.Drawing.Size(100, 20);
-            this.textBoxSveikatosDraudimasPagalSTANDARTINE.TabIndex = 6;
+            this.textBoxSveikDraudTARIF.Location = new System.Drawing.Point(17, 22);
+            this.textBoxSveikDraudTARIF.Name = "textBoxSveikDraudTARIF";
+            this.textBoxSveikDraudTARIF.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSveikDraudTARIF.TabIndex = 0;
             // 
             // labelSveikatosDraudimasPagalSTANDARTINE
             // 
@@ -136,12 +98,12 @@
             this.labelSveikatosDraudimasPagalSTANDARTINE.TabIndex = 7;
             this.labelSveikatosDraudimasPagalSTANDARTINE.Text = "%    Sveikatos draudimas";
             // 
-            // textBoxPensijuIrSocDraudimasPagalSTANDARTINE
+            // textBoxPensDraudTARIF
             // 
-            this.textBoxPensijuIrSocDraudimasPagalSTANDARTINE.Location = new System.Drawing.Point(17, 41);
-            this.textBoxPensijuIrSocDraudimasPagalSTANDARTINE.Name = "textBoxPensijuIrSocDraudimasPagalSTANDARTINE";
-            this.textBoxPensijuIrSocDraudimasPagalSTANDARTINE.Size = new System.Drawing.Size(100, 20);
-            this.textBoxPensijuIrSocDraudimasPagalSTANDARTINE.TabIndex = 4;
+            this.textBoxPensDraudTARIF.Location = new System.Drawing.Point(17, 41);
+            this.textBoxPensDraudTARIF.Name = "textBoxPensDraudTARIF";
+            this.textBoxPensDraudTARIF.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPensDraudTARIF.TabIndex = 1;
             // 
             // labelPensijuIrSocDraudimasPagalSTANDARTINE
             // 
@@ -152,27 +114,41 @@
             this.labelPensijuIrSocDraudimasPagalSTANDARTINE.TabIndex = 5;
             this.labelPensijuIrSocDraudimasPagalSTANDARTINE.Text = "%    Pensijų ir soc. draudimas";
             // 
-            // groupBox2
+            // textBoxPajaMokTARIF
             // 
-            this.groupBox2.Controls.Add(this.textBoxSveikatosDraudimasAUTORINE);
-            this.groupBox2.Controls.Add(this.labelSveikatosDraudimasAUTORINE);
-            this.groupBox2.Controls.Add(this.textBoxPensijuIrSocDraudimasAUTORINE);
-            this.groupBox2.Controls.Add(this.labelPensijuIrSocDraudimasAUTORINE);
-            this.groupBox2.Controls.Add(this.textBoxPajamuMokestisAUTORINE);
-            this.groupBox2.Controls.Add(this.labelPajamuMokestisAUTORINE);
-            this.groupBox2.Location = new System.Drawing.Point(22, 171);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(446, 95);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Mokesčiai pagal autorinę darbo sutartį";
+            this.textBoxPajaMokTARIF.Location = new System.Drawing.Point(17, 60);
+            this.textBoxPajaMokTARIF.Name = "textBoxPajaMokTARIF";
+            this.textBoxPajaMokTARIF.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPajaMokTARIF.TabIndex = 2;
             // 
-            // textBoxSveikatosDraudimasAUTORINE
+            // labelPajamuMokestisPagalSTANDARTINE
             // 
-            this.textBoxSveikatosDraudimasAUTORINE.Location = new System.Drawing.Point(17, 22);
-            this.textBoxSveikatosDraudimasAUTORINE.Name = "textBoxSveikatosDraudimasAUTORINE";
-            this.textBoxSveikatosDraudimasAUTORINE.Size = new System.Drawing.Size(100, 20);
-            this.textBoxSveikatosDraudimasAUTORINE.TabIndex = 6;
+            this.labelPajamuMokestisPagalSTANDARTINE.AutoSize = true;
+            this.labelPajamuMokestisPagalSTANDARTINE.Location = new System.Drawing.Point(123, 63);
+            this.labelPajamuMokestisPagalSTANDARTINE.Name = "labelPajamuMokestisPagalSTANDARTINE";
+            this.labelPajamuMokestisPagalSTANDARTINE.Size = new System.Drawing.Size(106, 13);
+            this.labelPajamuMokestisPagalSTANDARTINE.TabIndex = 2;
+            this.labelPajamuMokestisPagalSTANDARTINE.Text = "%    Pajamų mokestis";
+            // 
+            // groupBoxAutorine
+            // 
+            this.groupBoxAutorine.Controls.Add(this.textBoxSveikDraudAutorTARIF);
+            this.groupBoxAutorine.Controls.Add(this.labelSveikatosDraudimasAUTORINE);
+            this.groupBoxAutorine.Controls.Add(this.textBoxPajaMokAutorTARIF);
+            this.groupBoxAutorine.Controls.Add(this.labelPajamuMokestisAUTORINE);
+            this.groupBoxAutorine.Location = new System.Drawing.Point(22, 171);
+            this.groupBoxAutorine.Name = "groupBoxAutorine";
+            this.groupBoxAutorine.Size = new System.Drawing.Size(446, 88);
+            this.groupBoxAutorine.TabIndex = 1;
+            this.groupBoxAutorine.TabStop = false;
+            this.groupBoxAutorine.Text = "Mokesčiai pagal autorinę darbo sutartį";
+            // 
+            // textBoxSveikDraudAutorTARIF
+            // 
+            this.textBoxSveikDraudAutorTARIF.Location = new System.Drawing.Point(17, 22);
+            this.textBoxSveikDraudAutorTARIF.Name = "textBoxSveikDraudAutorTARIF";
+            this.textBoxSveikDraudAutorTARIF.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSveikDraudAutorTARIF.TabIndex = 0;
             // 
             // labelSveikatosDraudimasAUTORINE
             // 
@@ -183,77 +159,80 @@
             this.labelSveikatosDraudimasAUTORINE.TabIndex = 7;
             this.labelSveikatosDraudimasAUTORINE.Text = "%    Sveikatos draudimas";
             // 
-            // textBoxPensijuIrSocDraudimasAUTORINE
+            // textBoxPajaMokAutorTARIF
             // 
-            this.textBoxPensijuIrSocDraudimasAUTORINE.Location = new System.Drawing.Point(17, 41);
-            this.textBoxPensijuIrSocDraudimasAUTORINE.Name = "textBoxPensijuIrSocDraudimasAUTORINE";
-            this.textBoxPensijuIrSocDraudimasAUTORINE.Size = new System.Drawing.Size(100, 20);
-            this.textBoxPensijuIrSocDraudimasAUTORINE.TabIndex = 4;
-            // 
-            // labelPensijuIrSocDraudimasAUTORINE
-            // 
-            this.labelPensijuIrSocDraudimasAUTORINE.AutoSize = true;
-            this.labelPensijuIrSocDraudimasAUTORINE.Location = new System.Drawing.Point(123, 44);
-            this.labelPensijuIrSocDraudimasAUTORINE.Name = "labelPensijuIrSocDraudimasAUTORINE";
-            this.labelPensijuIrSocDraudimasAUTORINE.Size = new System.Drawing.Size(143, 13);
-            this.labelPensijuIrSocDraudimasAUTORINE.TabIndex = 5;
-            this.labelPensijuIrSocDraudimasAUTORINE.Text = "%    Pensijų ir soc. draudimas";
-            // 
-            // textBoxPajamuMokestisAUTORINE
-            // 
-            this.textBoxPajamuMokestisAUTORINE.Location = new System.Drawing.Point(17, 60);
-            this.textBoxPajamuMokestisAUTORINE.Name = "textBoxPajamuMokestisAUTORINE";
-            this.textBoxPajamuMokestisAUTORINE.Size = new System.Drawing.Size(100, 20);
-            this.textBoxPajamuMokestisAUTORINE.TabIndex = 0;
+            this.textBoxPajaMokAutorTARIF.Location = new System.Drawing.Point(17, 41);
+            this.textBoxPajaMokAutorTARIF.Name = "textBoxPajaMokAutorTARIF";
+            this.textBoxPajaMokAutorTARIF.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPajaMokAutorTARIF.TabIndex = 2;
             // 
             // labelPajamuMokestisAUTORINE
             // 
             this.labelPajamuMokestisAUTORINE.AutoSize = true;
-            this.labelPajamuMokestisAUTORINE.Location = new System.Drawing.Point(123, 63);
+            this.labelPajamuMokestisAUTORINE.Location = new System.Drawing.Point(123, 44);
             this.labelPajamuMokestisAUTORINE.Name = "labelPajamuMokestisAUTORINE";
             this.labelPajamuMokestisAUTORINE.Size = new System.Drawing.Size(106, 13);
             this.labelPajamuMokestisAUTORINE.TabIndex = 2;
             this.labelPajamuMokestisAUTORINE.Text = "%    Pajamų mokestis";
+            // 
+            // buttonIssaugoti
+            // 
+            this.buttonIssaugoti.Location = new System.Drawing.Point(22, 288);
+            this.buttonIssaugoti.Name = "buttonIssaugoti";
+            this.buttonIssaugoti.Size = new System.Drawing.Size(152, 43);
+            this.buttonIssaugoti.TabIndex = 2;
+            this.buttonIssaugoti.Text = "Išaugoti";
+            this.buttonIssaugoti.UseVisualStyleBackColor = true;
+            this.buttonIssaugoti.Click += new System.EventHandler(this.buttonIssaugoti_Click);
+            // 
+            // buttonUzdaryti
+            // 
+            this.buttonUzdaryti.Location = new System.Drawing.Point(316, 288);
+            this.buttonUzdaryti.Name = "buttonUzdaryti";
+            this.buttonUzdaryti.Size = new System.Drawing.Size(152, 43);
+            this.buttonUzdaryti.TabIndex = 3;
+            this.buttonUzdaryti.Text = "Uždaryti";
+            this.buttonUzdaryti.UseVisualStyleBackColor = true;
+            this.buttonUzdaryti.Click += new System.EventHandler(this.buttonUzdaryti_Click);
             // 
             // FormNustatymai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(491, 369);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBoxAutorine);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonUzdaryti);
             this.Controls.Add(this.buttonIssaugoti);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNustatymai";
             this.Text = "NUSTATYMAI";
+            this.Load += new System.EventHandler(this.FormNustatymai_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBoxAutorine.ResumeLayout(false);
+            this.groupBoxAutorine.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBoxPajamuMokestisPagalSTANDARTINE;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBoxPensDraudTARIF;
+        private System.Windows.Forms.Label labelPensijuIrSocDraudimasPagalSTANDARTINE;
+        private System.Windows.Forms.TextBox textBoxPajaMokTARIF;
         private System.Windows.Forms.Label labelPajamuMokestisPagalSTANDARTINE;
+        private System.Windows.Forms.TextBox textBoxSveikDraudTARIF;
+        private System.Windows.Forms.Label labelSveikatosDraudimasPagalSTANDARTINE;
+        private System.Windows.Forms.TextBox textBoxDarbdavMokTARIF;
+        private System.Windows.Forms.Label labelDarbdavioMokesciaiPagalSTANDARTINE;
+        private System.Windows.Forms.GroupBox groupBoxAutorine;
+        private System.Windows.Forms.TextBox textBoxSveikDraudAutorTARIF;
+        private System.Windows.Forms.Label labelSveikatosDraudimasAUTORINE;
+        private System.Windows.Forms.TextBox textBoxPajaMokAutorTARIF;
+        private System.Windows.Forms.Label labelPajamuMokestisAUTORINE;
         private System.Windows.Forms.Button buttonIssaugoti;
         private System.Windows.Forms.Button buttonUzdaryti;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBoxPensijuIrSocDraudimasPagalSTANDARTINE;
-        private System.Windows.Forms.Label labelPensijuIrSocDraudimasPagalSTANDARTINE;
-        private System.Windows.Forms.TextBox textBoxSveikatosDraudimasPagalSTANDARTINE;
-        private System.Windows.Forms.Label labelSveikatosDraudimasPagalSTANDARTINE;
-        private System.Windows.Forms.TextBox textBoxDarbdavioMokesciaiPagalSTANDARTINE;
-        private System.Windows.Forms.Label labelDarbdavioMokesciaiPagalSTANDARTINE;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBoxSveikatosDraudimasAUTORINE;
-        private System.Windows.Forms.Label labelSveikatosDraudimasAUTORINE;
-        private System.Windows.Forms.TextBox textBoxPensijuIrSocDraudimasAUTORINE;
-        private System.Windows.Forms.Label labelPensijuIrSocDraudimasAUTORINE;
-        private System.Windows.Forms.TextBox textBoxPajamuMokestisAUTORINE;
-        private System.Windows.Forms.Label labelPajamuMokestisAUTORINE;
     }
 }

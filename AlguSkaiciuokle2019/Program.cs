@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace AlguSkaiciuokle2019
 {
@@ -19,4 +20,7 @@ namespace AlguSkaiciuokle2019
             Application.Run(new FormPagrindine());
         }
     }
+
+    
+    
 }

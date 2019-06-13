@@ -1,64 +1,66 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Data.Linq;
 
 namespace AlguSkaiciuokle2019
 {
     public partial class FormNustatymai : Form
     {
+
         public FormNustatymai()
         {
             InitializeComponent();
-            List<string> mokesciuTarifai = new List<string>();
-            try
-            {
-                using (System.IO.StreamReader reader = new StreamReader("MokesciuTarifai.txt", true))
-                {
-                    mokesciuTarifai = reader.ReadLine().Split('|').ToList();
-                }
-                textBoxSveikatosDraudimasPagalSTANDARTINE.Text = mokesciuTarifai[0];
-                textBoxPensijuIrSocDraudimasPagalSTANDARTINE.Text = mokesciuTarifai[1];
-                textBoxPajamuMokestisPagalSTANDARTINE.Text = mokesciuTarifai[2];
-                textBoxDarbdavioMokesciaiPagalSTANDARTINE.Text = mokesciuTarifai[3];
-                
-                textBoxSveikatosDraudimasAUTORINE.Text = mokesciuTarifai[4];
-                textBoxPensijuIrSocDraudimasAUTORINE.Text = mokesciuTarifai[5];
-                textBoxPajamuMokestisAUTORINE.Text = mokesciuTarifai[6];
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Problemos nuskaitant failą!");
-            }
-
         }
+
+        string connectionString = DbParametraiIsFailo();
+
+        private void FormNustatymai_Load(object sender, EventArgs e)
+        {
+            GetData();
+        }
+
+        public void GetData()
+        {
+            DataContext db = new DataContext(connectionString);
+            var lentele = db.GetTable<Mokesciai>().ToList();            
+
+            textBoxSveikDraudTARIF.Text = lentele[0].SveikatosDraudimo.ToString();
+            textBoxPensDraudTARIF.Text = lentele[0].PensijuIrSocDraudimo.ToString();
+            textBoxPajaMokTARIF.Text = lentele[0].Pajamu.ToString();
+            textBoxDarbdavMokTARIF.Text = lentele[0].Darbdavio.ToString();
+
+            textBoxSveikDraudAutorTARIF.Text = lentele[1].SveikatosDraudimo.ToString();
+            textBoxPajaMokAutorTARIF.Text = lentele[1].Pajamu.ToString();
+        }
+
 
         private void buttonIssaugoti_Click(object sender, EventArgs e)
         {
             try
             {
-                if (!PatikrintiArTikSkaiciai(textBoxPajamuMokestisPagalSTANDARTINE.Text.ToCharArray()))
+                if (!PatikrintiArTikSkaiciai(textBoxPajaMokTARIF.Text.ToCharArray()))
                 {
-                    //MessageBox.Show("Patikrinkite įvedamą informaciją. Galima įvesti tik skaičius!");
+
                     throw new FormatException("Patikrinkite įvedamą informaciją. Galima įvesti tik skaičius!");
                 }
+                
+                DataContext db = new DataContext(connectionString);
+                var lentele1 = db.GetTable<Mokesciai>().Where(x => x.Id ==  1).First();
+                lentele1.Tipas = "Standartinė";
+                lentele1.SveikatosDraudimo = Convert.ToDouble(textBoxSveikDraudTARIF.Text);
+                lentele1.PensijuIrSocDraudimo = Convert.ToDouble(textBoxPensDraudTARIF.Text);
+                lentele1.Pajamu = Convert.ToDouble(textBoxPajaMokTARIF.Text);
+                lentele1.Darbdavio = Convert.ToDouble(textBoxDarbdavMokTARIF.Text);
 
-                File.WriteAllText("MokesciuTarifai.txt", String.Empty);
+                var lentele2 = db.GetTable<Mokesciai>().Where(x => x.Id == 2).First();
+                lentele2.Tipas = "Autorinė";
+                lentele2.SveikatosDraudimo = Convert.ToDouble(textBoxSveikDraudAutorTARIF.Text);                
+                lentele2.Pajamu = Convert.ToDouble(textBoxPajaMokTARIF.Text);                
 
-                using (System.IO.StreamWriter writer = new System.IO.StreamWriter("MokesciuTarifai.txt", true))
-                {
-                    writer.WriteLine(
-                    textBoxSveikatosDraudimasPagalSTANDARTINE.Text + "|" +
-                    textBoxPensijuIrSocDraudimasPagalSTANDARTINE.Text + "|" +
-                    textBoxPajamuMokestisPagalSTANDARTINE.Text + "|" +
-                    textBoxDarbdavioMokesciaiPagalSTANDARTINE.Text + "|" +
-
-                    textBoxSveikatosDraudimasAUTORINE.Text + "|" +
-                    textBoxPensijuIrSocDraudimasAUTORINE.Text + "|" +
-                    textBoxPajamuMokestisAUTORINE.Text); 
-                    writer.Flush(); // Priverst įrašinėt ir išvalyt buferį
-                }
+                db.SubmitChanges();
+                db.Dispose();
 
                 MessageBox.Show("Vartotojo duomenys išsaugoti");
                 Close();
@@ -86,6 +88,25 @@ namespace AlguSkaiciuokle2019
                 }
             }
             return atsakymas;
+        }
+
+
+        public static string DbParametraiIsFailo()
+        {
+            string mokesciuTarifai = null;
+            try
+            {                
+                using (System.IO.StreamReader reader = new StreamReader("setup.ini", true))
+                {
+                    mokesciuTarifai = Convert.ToString(reader.ReadLine());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Problemos nuskaitant setup.ini failą!");
+                MessageBox.Show(ex.Message);
+            }
+            return mokesciuTarifai;
         }
     }
 }

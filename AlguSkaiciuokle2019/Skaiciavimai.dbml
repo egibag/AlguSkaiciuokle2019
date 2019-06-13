@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AlguSkaiciuokle2019DB" Class="SkaiciavimaiDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AlguSkaiciuokle2019DB.mdf;Integrated Security=True" SettingsObjectName="AlguSkaiciuokle2019.Properties.Settings" SettingsPropertyName="AlguSkaiciuokle2019DBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Skaiciavimai" Member="Skaiciavimais">
+    <Type Name="Skaiciavimai">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VardasPavarde" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EurAlgaAntPopieriaus" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EurAlgaIRankas" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EurAAlgaAntPopieriaus" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EurAAlgaIRankas" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EurSveikatosDraudimo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EurPensijuIrSocDraudimo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EurPajamu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EurDarbdavio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EurAutorSveikatosDraudimo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EurAutorPajamu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SveikatosDraudimo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PensijuIrSocDraudimo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Pajamu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Darbdavio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AutorSveikatosDraudimo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AutorPajamu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DarbuotojoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

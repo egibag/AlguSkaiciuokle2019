@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AlguSkaiciuokle2019DB" Class="MokesciaiDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\AlguSkaiciuokle2019DB.mdf;Integrated Security=True" SettingsObjectName="AlguSkaiciuokle2019.Properties.Settings" SettingsPropertyName="AlguSkaiciuokle2019DBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Mokesciai" Member="Mokesciais">
+    <Type Name="Mokesciai">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Tipas" Type="System.String" DbType="NVarChar(11)" CanBeNull="true" />
+      <Column Name="SveikatosDraudimo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PensijuIrSocDraudimo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Pajamu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Darbdavio" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
